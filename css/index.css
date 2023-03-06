@@ -170,4 +170,11 @@
     color: var(--primary-color);
 }
 
+.content--news-movie > p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+}
+
 /*#endregion  */
