@@ -1,0 +1,217 @@
+.logo-sign {
+    width: 50%;
+    margin-bottom: 20px;
+    animation: spin 20s linear infinite;
+    box-shadow: 0 0 10px;
+    border-radius: 50%;
+}
+
+@keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+#form.row {
+    flex-direction: column;
+}
+
+.form-group {
+    margin: 30px auto 0px;
+    max-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 400px;
+    padding: 0;
+}
+
+.form-group.message .form-message {
+    display: block;
+}
+
+.form-message {
+    margin-top: 5px;
+    text-align: left;
+    color: red;
+    width: 100%;
+    max-width: 400px;
+    display: none;        
+}
+
+.form-group input {
+    width: 100%;
+    max-width: 400px;
+    min-height: 40px;
+    border-radius: 6px;
+    padding: 5px 10px;
+    box-shadow: none;
+    border: none;
+    color: var(--input-color);
+    outline: none;
+}
+
+.form-group input:focus, #province:focus {
+    box-shadow: 0 0 8px 1px var(--primary-color);
+}
+
+#fullname {
+    text-transform: capitalize;
+}
+
+#province {
+    height: 40px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 5px 10px;
+    color: var(--input-color);
+    outline: none;
+}
+
+.check-vertify {
+    position: absolute;
+    margin: auto 0;
+    height: 70%;   
+    right: 15px;
+    display: none;
+}
+
+.form-group.correct .check--correct,
+.form-group.incorrect .check--incorrect{
+    display: block;
+}
+
+.btn--control {
+    width: 100%;
+    max-width: 400px;
+    background-color: #008449;
+    color: #fff;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: none;
+    transition: all 0.5s;
+}
+
+.btn--control:hover {
+    box-shadow: 0 0 4px #ffffff;
+}
+
+.btn--submit {
+    width: 100%;
+    max-width: 400px;
+    background: var(--primary-color);
+    color: #ffff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    height: 40px;
+    margin-right: 10%;
+    margin: 30px auto;
+}
+
+@media screen and (max-width: 767.5px) {
+    .form-group {
+        margin-top: 20px;
+        max-height: none;
+    }
+
+    .btn--submit {
+        margin: 20px auto;
+    }
+}
+
+/* Message vertify */
+
+#message-vertify {
+    position: fixed;
+    top: -25%;
+    max-width: 90%;
+    width: 370px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #d9d9d9;
+    padding: 8px 12px 12px 8px;
+    border-radius: 10px;
+    z-index: 1000;
+    transition: all 1s; 
+    text-align: left;
+}
+
+#message-vertify.active {
+    top: 1%;
+}
+
+#message-vertify img{
+    border-radius: 4px;
+    margin-right: 4px;
+}
+
+#message-vertify .heading span {   
+    font-size: 15px;
+    color: #b6b6b6;
+    text-shadow: 0 0 1.5px #888;
+    font-weight: 600;
+}
+
+#message-vertify .name-sender {
+    margin: 12px 0 6px;
+    text-shadow: 0 0 1.5px #fff;
+}
+
+/* Notify */
+#notify {
+    display: none;
+}
+
+.box--notify {
+    min-width: 75%;
+    max-width: 80%;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0 0 8px #000;
+    border-radius: 8px;
+    position: relative;
+    padding-top: 40px !important;
+}
+
+.box--notify .exit {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    opacity: 0.8;
+    border-radius: 6px; 
+    overflow: hidden;  
+}
+
+.box--notify .exit:hover {
+    opacity: 1;    
+}
+
+.box--notify .member img { 
+    width: 50px;
+    margin-right: 10px;
+}
+
+.box--notify a {    
+    background-color: var(--primary-color);
+    padding: 4px 8px;  
+    border-radius: 4px;  
+    filter: brightness(80%);
+    transition: all 0.5s;
+}
+
+.box--notify a:hover {
+    filter: brightness(100%);
+    color: #ffffff;
+    box-shadow: 2px 2px 6px rgb(0, 0, 0);
+}
+
+/* Forget pass */
+.forget {
+    text-align: left;
+    margin: 10px auto 0px;
+    max-width: 400px;    
+}

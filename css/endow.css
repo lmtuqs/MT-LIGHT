@@ -1,0 +1,44 @@
+.animation-hover {
+    border-radius: 8px;  
+    overflow: hidden; 
+    cursor: pointer;
+    position: relative;     
+}
+
+.animation-hover img {
+    scale: 1;
+    transition: all 0.5s linear;
+}
+
+.animation-hover:hover img {      
+    scale: 1.1;    
+}
+
+.animation-hover:hover .over-cursor {
+    display: flex;
+    animation: fadeIn 0.2s linear;
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0}
+    to { opacity: 1}
+}
+
+.animation-hover:hover {
+    box-shadow: 0 0 8px 2px #ffffff;  
+}
+
+.over-cursor {
+    position: absolute;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    height: 100%;
+    top: 0;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 2px;
+    display: none;
+}
+

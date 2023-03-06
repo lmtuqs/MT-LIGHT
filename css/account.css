@@ -1,0 +1,54 @@
+.wrapper {
+    background-color: #fff;
+    color: #000;
+    width: fit-content;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    padding: 10px 20px;
+    text-align: left;
+    box-shadow: 5px 5px 0px var(--primary-color);
+    min-width: 300px;
+}
+
+.wrapper p {
+    margin: 10px 0;
+}
+
+.control button{
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    filter: brightness(80%);
+    transition: all 0.5s;
+}
+
+.control button:hover {
+    filter: brightness(100%);
+    color: #ffffff;
+    box-shadow: 2px 2px 2px rgb(255, 255, 255);
+}
+
+.control button:hover a {
+    color: #ffffff;
+}
+/* History */
+table {
+    width: 90%;
+    margin: auto;    
+}
+
+table tr {
+    border: 1px solid #ccc;
+}
+
+table tr td, table tr th {
+    border-right: 1px solid #ccc;
+    padding: 5px 0;
+}
+
+table tr th {
+    color: var(--primary-color);
+    font-style: italic;
+}

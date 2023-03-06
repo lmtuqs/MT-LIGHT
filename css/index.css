@@ -1,0 +1,173 @@
+/*#region Slider  */
+.wrapper-slide {
+    overflow: hidden;
+}
+
+.slide-item {
+    width: 100%;
+    float: left;
+    margin-right: -100%;
+    display: none;
+}
+
+.slide-item.active {
+    display: block;
+}
+
+.btn-control {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 15%;
+    padding: 0;
+    color: #fff;    
+
+    background: transparent;
+    border: none;
+    opacity: 0.5;
+
+    font-size: 2em;  
+    transition: all 0.5s linear;    
+    outline: none;  
+}
+
+.btn-control:hover {
+    opacity: 1;
+    text-shadow: 0px 0px 4px #000;
+}
+
+.btn-control--next {
+    right: 0;
+}
+
+/*#endregion  */
+
+/*#region Upcoming movie and Playing movie  */
+#upcoming-movie {
+    background: url(../img/upcoming-movie/background.png) no-repeat center / cover;   
+}
+
+#playing-movie {
+    background: url(../img/playing-movie/background.png) no-repeat center / cover;  
+}
+
+#row--upcoming-movie .col-12 {
+    transition: all 0.5s;
+    transform: translateX(0%);
+}
+
+.btn-control--slide {
+    background: transparent;
+    border: none;
+    font-size: 2em;
+    margin-right: 20px;
+    color: #888    
+}
+/*#endregion  */
+
+/*#region Promotions and events  */
+#promotions-events {
+    background: url(../img/promotions-events/background.png) no-repeat center / cover;    
+}
+
+/*#endregion  */
+
+/*#region Hot movie  */
+#hot-movie {
+    background-color: #22272b;
+}
+
+#content--hot-movie .row:last-child .space-hr {
+    display: none;
+}
+
+.info--hot-movie {
+    text-align: left;
+}
+
+.info--hot-movie p {
+    margin: 0;
+}
+
+.info--hot-movie .tags {    
+    color: var(--primary-color);
+}
+
+.info--hot-movie .btn--book-tickets {
+    margin-top: 10px;
+    display: inline-block;
+}
+/*#endregion  */
+
+/*#region News movie  */
+#news-movie {
+    background-color: #e2e2e2;
+    color: #000;
+}
+
+.item--news-movie {
+    transform: translateY(0px);
+    transition: all 0.5s;
+}
+
+.item--news-movie:hover {
+    transform: translateY(-5px);      
+}
+
+.img--news-movie {
+    overflow: hidden;    
+}
+
+.img--news-movie img {
+    scale: 1;
+    transition: all 0.5s;
+}
+
+.item--news-movie:hover img {
+    scale: 1.1;
+}
+
+.info--news-movie {
+    background-color: #fff;
+    color: #000;
+    text-align: left;
+    padding: 10px 20px;
+    min-height: 180px;
+}
+
+.info--news-movie h4 a {
+    font-size: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.info--news-movie a {
+    color: #000;
+}
+
+.info--news-movie a:hover {
+    color: var(--primary-color);
+}
+
+.tags--news-movie {
+    display: flex;
+}
+
+.tags--news-movie p {
+    margin-right: 20px;
+}
+
+.tags--news-movie p i {
+    margin-right: 5px;
+    color: var(--primary-color);
+}
+
+/*#endregion  */

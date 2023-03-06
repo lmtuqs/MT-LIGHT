@@ -1,0 +1,29 @@
+#cinema {
+    background-color: #e6e7e9;
+}
+
+.link--cinema {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.link--cinema img {
+    scale: 1;
+    transition: all 0.5s linear;
+}
+
+.link--cinema p {
+    margin-bottom: 5px;
+}
+
+.link--cinema:hover {
+    box-shadow: 0 0 6px 1px #000;
+}
+
+.link--cinema img:hover {
+    box-shadow: none;
+}
+
+.link--cinema:hover img {
+    scale: 1.1;
+}

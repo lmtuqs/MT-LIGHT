@@ -1,0 +1,95 @@
+.wrapper {    
+    padding: 20px;
+    background: linear-gradient(45deg, black, var(--primary-color));
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px 1px #fff;
+    margin: 0 auto 20px;  
+}
+
+.wrapper p {
+    margin: 10px auto;
+}
+
+.phone-cinema {
+    font-size: 20px;
+}
+
+.wrapper h4 {
+    text-shadow: 0 0 4px var(--primary-color);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Day display */
+.day--display {
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.day--display .line-bottom{
+    width: 0px;
+    height: 2px;
+    background-color: var(--primary-color);
+    margin: 0 auto;  
+    transition: all 0.5s;  
+}
+
+.day--display:hover .line-bottom {
+    width: 100px;
+}
+
+.day--display.active .line-bottom{
+    width: 100px;
+}
+
+.day--display .day-of-week {
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Movie */
+/*#region Hot movie  */
+#hot-movie {
+    background-color: #22272b;
+}
+
+#content--hot-movie .row:last-child .space-hr {
+    display: none;
+}
+
+.info--hot-movie {
+    text-align: left;
+}
+
+.info--hot-movie p {
+    margin: 10px 0;
+}
+
+.info--hot-movie .tags {    
+    color: var(--primary-color);
+}
+
+.info--hot-movie .btn--book-tickets {
+    margin-top: 10px;
+    display: inline-block;
+}
+/*#endregion  */
+
+/* Book ticket */
+.btn--book-tickets {
+    border: 1px solid #fff;
+    padding: 4px 10px; 
+    margin-right: 10px;
+    cursor: pointer;  
+}
+
+.btn--book-tickets.off {
+    background-color: #ccc;
+}
+
+.btn--book-tickets.off:hover {
+    color: #fff;
+    cursor: default;
+    font-weight: normal;
+}
