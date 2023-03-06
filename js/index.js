@@ -81,7 +81,7 @@ $(function(){
                                 <p><b class="primary-color">Đạo diễn: </b>${list[listRandom[i]].director}</p>
                                 <p><b class="primary-color">Diễn viên: </b>${list[listRandom[i]].actor}</p>
                                 <p><b class="primary-color">Mô tả: </b>${list[listRandom[i]].desc}</p>                       
-                                <a href="#" class="box-action--red btn--book-tickets">
+                                <a class="box-action--red btn--book-tickets">
                                     <i class="fa fa-ticket"></i>Đặt vé
                                 </a>                        
                             </div>
@@ -228,4 +228,35 @@ $(function(){
     //#endregion 
 
     showData()
+})
+
+//Event click buy ticket
+$(document).on('click', '.btn--book-tickets', function() {
+    if(!$(this).hasClass('off')) {
+        let nameMovie = $(getParentElement(this, 'info--hot-movie')).children('h5').text()
+        showNotify(nameMovie)
+    }
+})
+
+function showNotify(nameMovie) {
+    localStorage.setItem('crr-movie--@mtlight',nameMovie)
+    let notify =    `<div id="notify" class="overlay flex-ct d-flex">
+                        <div class="box--notify flex-ct flex-column p-4">                           
+                            <div class="member flex-ct">
+                                <img src="./img/tickets/icon-buy-tickets.png">
+                                <h5 class="title">ĐẶT VÉ XEM PHIM</h5>
+                            </div>
+                            <p id="name-movie">${nameMovie}</p>
+                            <hr class="w-100 opacity-100">
+                            <div class="wrapper-btn--buy flex-ct">
+                                <a href="./book-ticket.html" class="buy-ticket me-5">Đặt vé</a>
+                                <a class="exit-notify bg-dark">Hủy bỏ</a>
+                            </div>
+                        </div>
+                    </div>`
+    $('#app').append(notify)
+}
+
+$(document).on('click', '#notify .exit-notify', function() {
+    $('#notify').remove()
 })
